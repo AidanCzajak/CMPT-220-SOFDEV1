@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class AssignmentOne {
+ public static void main(String[] args) {
+ //finish this one for me by receiving and printing the user's age back to them
+ 
+ Scanner sc = new Scanner(System.in);
+ 
+ 
+ System.out.println("How old are you? ");
+    int age = sc.nextInt();
+ System.out.println("awesome i rmeber when i was"+ age);
+
+ //can you do some math for me? take these variables and print out the sum of them!
+ int num1 = 10;
+ int num2 = 37;
+
+ 
+ System.out.print( num1+ "+"+ num2 +"=");
+ System.out.print(num1 + num2);
+ //?
+ // what i learned & rembered was that a int can be scnned the same way as a string so i googled what it was to find out 
+ // also that when i tried to do all the math within one print i would bug out and not add it together so i broke it up into to prints to fix it 
+ }
+}
