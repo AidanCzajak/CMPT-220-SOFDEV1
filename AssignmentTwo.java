@@ -78,6 +78,9 @@ public class AssignmentTwo {
      
             
     }
+
+    //what i learned is how to compile many ifs and else together to get a linear 
+    // i did however encounter an error when tryin to use a loop to allow players to repete that instead of repeting all the code it just only reptes the first question when you get it wrong 
        
 
 }
