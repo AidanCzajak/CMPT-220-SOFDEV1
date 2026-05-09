@@ -1,0 +1,82 @@
+import java.util.Random;
+
+
+
+public class student{
+    String name;
+    String year;
+    double gpa;
+    int id;
+
+public student(String n, String y, double g, int i ){
+    name = n;
+    year = y;
+    gpa = g; 
+    id = i ;
+    
+}
+
+public boolean HonorRoll(){
+    if (gpa >= 3.6) {
+        return true;
+}
+return false;
+}
+
+public boolean freeLunch(int randomID){
+
+if (id == randomID){
+    return true;
+}
+return false;
+}
+public static void main(String[] args) {
+        
+student s1 = new student("Aidan", "Junior", 3.9, 1023);
+student s2 = new student("Kenzie", "Junior", 3.2, 2456);
+student s3 = new student("Abbie", "Freshman", 3.8, 3874);
+student s4 = new student("Paul", "Senior", 2.9, 4512);
+student s5 = new student("Tracey", "Senior", 4.0, 5999);
+
+        student[] students = {s1, s2, s3, s4, s5};
+        System.out.println("Honor Roll Results");
+
+
+
+for (int i = 0; i < students.length; i++) {
+
+    if (students[i].HonorRoll()) {
+        System.out.println(students[i].name + " is an honor roll student");
+    } else {
+        System.out.println(students[i].name + " is not an honor roll student");
+    }
+}
+
+
+
+
+Random rand = new Random();
+
+int randomID = rand.nextInt(6000);
+
+
+for (int i = 0; i < students.length; i++) {
+
+    if (students[i].freeLunch(randomID)) {
+        System.out.println (students[i].name+ " gets a free lunch");
+    }else{
+        System.out.println("sorry no free lunch for "+ students[i].name);
+
+    }
+
+}
+
+
+
+ }
+
+}
+
+
+//what i learned that was new was just some small things like doubles as avarible type.
+//it also refreshed my understanding of random num and overall helped me practice working with methods and arrays   
