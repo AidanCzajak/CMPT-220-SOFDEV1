@@ -1,0 +1,118 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+import java.util.Scanner;
+
+public class Main {
+
+    
+    public static String StrengthCheck(String password) {
+        int score = 0;
+
+        if (password.length() >= 8) {
+            score++;
+             }
+
+        
+        if (password.matches(".*[A-Z].*")) {
+            score++;
+         }
+
+        if (password.matches(".*[a-z].*")) {
+            score++; }
+
+        if (password.matches(".*[0-9].*")) {
+            score++;
+                 }
+        if (password.matches(".*[!@#$%^&*()].*")) {
+            score++;
+        }
+
+        if (score == 5) {
+            return "Very Strong Password";
+        } else if (score >= 3) {
+            return "Moderate Password";
+        } else {
+            return "Weak Password";
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner(System.in);
+
+        System.out.println("Enter a password to test: ");
+        String password = input.nextLine();
+
+        
+        String result = StrengthCheck(password);
+        System.out.println("Password Strength: " + result);
+}
+}
+
+//bassicly what i leanred/reviewed from this was not only how to call functions but also how to check string variables for specicif things like upper case or lower case characters
+// i found this info on google 
+
+
+
+DEBUG 
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        factorial(scanner);
+        everyOtherSum(scanner);
+        reverseString(scanner);
+
+   }
+    public static void factorial(Scanner scanner) {
+
+        System.out.println("Problem 2");
+          System.out.println("Enter a number and I will tell you the factorial:");
+
+          int num = scanner.nextInt();
+          int fact = 1;
+
+        for (int i = 1; i <= num; i++) {
+            fact *= i;
+   }
+
+        System.out.println("Factorial: " + fact);
+    }
+
+    public static void everyOtherSum(Scanner scanner) {
+
+        System.out.println("Problem 3");
+          System.out.println("Enter a number and I will tell you the sum of every other number:");
+
+        int num = scanner.nextInt();
+        int sum = 0;
+
+        for (int i = 1; i <= num; i += 2) {
+            sum += i;
+        }
+
+        System.out.println("Sum: " + sum);
+}
+
+      public static void reverseString(Scanner scanner)   {
+
+        scanner.nextLine(); // clears leftover newline
+
+            System.out.println("Problem 5");
+          System.out.println("Enter a word or sentence:");
+
+        String input = scanner.nextLine();
+        String reverse = "";
+
+        for (int i = input.length() - 1; i >= 0; i--) {
+            reverse += input.charAt(i);
+  }
+
+        System.out.println("Reversed: " + reverse);
+    }
+    }
